@@ -1,12 +1,12 @@
-Course 8: Capstone Instructions
+# Course 8: Capstone Instructions
 
 
-Overview:
+# Overview:
     In this capstone course, you are tasked with building a comprehensive project that encapsulates all the skills you've honed throughout this program. Your mission is to develop a robust website for Little Lemon, a popular dining spot that desires a seamless online reservation system. This project will not only test your technical skills but also your ability to apply them in a real-world scenario.
 
 
 
-★ Parts of the Project - What Pages and Features are Needed:
+# ★ Parts of the Project - What Pages and Features are Needed:
 
     IMPORTANT - “Book a Reservation” Page:
         The primary objective of this project is to develop a reservation flow in your React project. Most of your time and effort should be dedicated to creating a reservation system for the restaurant, guided by your Figma design.
@@ -35,7 +35,7 @@ Overview:
 
 
 
-★ Checklist - Features and Processes You Must Include:
+# ★ Checklist - Features and Processes You Must Include:
 
     Establish meta tags and Open Graph protocol data
         Create a meta description for your project:
@@ -56,7 +56,7 @@ Overview:
 
 
 
-Include CSS Styling:
+# Include CSS Styling:
 
     Implement a Reusable Layout:
         Code a reusable grid or flexbox layout for your website.
@@ -72,7 +72,7 @@ Include CSS Styling:
 
 
 
-Create Holistic Project Components:
+# Create Holistic Project Components:
 
     Develop the Initial Version of Your Homepage Components:
         Create the first version of the components for your homepage.
@@ -91,7 +91,7 @@ Create Holistic Project Components:
 
 
 
-Lift State Up:
+# Lift State Up:
 
     Move state to a higher component level (For additional guidance, see "Adding table booking state").
 
@@ -106,7 +106,7 @@ Lift State Up:
 
 
 
-Working with the API:
+# Working with the API:
 
     Add a table showing the data from the bookingData array:
         For more information on how to do this, you can use the information found at “Connecting the bookings page to the API”
@@ -122,7 +122,7 @@ Working with the API:
 
 
 
-Improve the UX of the Project:
+# Improve the UX of the Project:
 
     Implement client-side validation for the date input, the time input, the number input, and the select form element:
         For more information on how to do this, you can use the information found at “Adding form validation”.
@@ -132,7 +132,7 @@ Improve the UX of the Project:
 
 
 
-Address accessibility needs:
+# Address accessibility needs:
 
     Improve the accessibility of your app by enhancing the semantic markup used
 
@@ -144,7 +144,7 @@ Address accessibility needs:
 
 
 
-Project Criteria - The rubric you’ll be graded on:
+# Project Criteria - The rubric you’ll be graded on:
 
 UX/UI Design and Implementation: Your work should follow your previously designed “Book a Reservation” Figma file you created in Course 7, and correctly implement the user experience and user interface
 Accessibility: Ensure that appropriate accessibility tags are applied throughout the web application to support users with disabilities

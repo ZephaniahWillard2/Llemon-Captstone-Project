@@ -1,11 +1,12 @@
 import React from 'react';
-import {Broswer}
+import {BrowserRouter as Router, Route, Routes, Link} from 'react-router-dom';
+import Reservation from './Components/Reservation';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      Hello
+      <Reservation/>
     </div>
   );
 }
