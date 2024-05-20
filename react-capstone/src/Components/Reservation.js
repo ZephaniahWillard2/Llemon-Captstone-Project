@@ -10,9 +10,9 @@ const Reservation = ()=>{
 
     return(
         <div className='grid-container'>
-            <h1>Reserve a Table</h1>
-            <h2>Make a Reservation at Your Local Little Lemon Restaraunt!</h2>
-            <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            <h1 style={{color:'white'}}>Reserve a Table</h1>
+            <h2 style={{color:'white'}}>Make a Reservation at Your Local Little Lemon Restaraunt!</h2>
+            <h4 style={{color:'white'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                 Ut enim ad minim veniam.
             </h4> <br></br>
             <form className='form-container'>
@@ -21,7 +21,7 @@ const Reservation = ()=>{
                     <input type='text' id='name-input' name="name" placeholder='Name'></input>
 
                     <label htmlFor='partyNumber-input' id='partyNumber-label'>Party Size </label>
-                    <input type='number' id='partyNumber-input' name="partyNumber" placeholder='Party Size'></input>
+                    <input type='number' id='partyNumber-input' name="partyNumber" max={15} placeholder='Party Size'></input>
 
                     <RadioButton selectedOption={selectedOption} handleChange={handleChange} />
 
@@ -36,6 +36,8 @@ const Reservation = ()=>{
 
                     <label htmlFor='phone-input' id='phone-label'>Phone (Optional) </label>
                     <input type='phone' id='phone-input' name="phone" placeholder='Phone'></input>
+                    <button type='submit' id='reserve-button'>Submit Reservation</button>
+
 
             </form>
         </div>

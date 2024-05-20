@@ -5,25 +5,25 @@
     margin-right: 50%;
     padding-left: 2%;
     padding-bottom: 5%;
+    background-color: #495E57;
 }
 .form-container{
     display: grid;
     row-gap: 15px;
     grid-template-columns: 200px 200px;
-    grid-template-rows: repeat(7, 60px);
+    grid-template-rows: repeat(8, 60px);
     justify-items: left;
     align-items: center;
-    /* margin: auto; */
     padding: 20px 50px 20px 50px;
     border: solid;
     border-radius: 20px;
+    background-color: #E2DFCF;
 }
 
 .form-container input{
     font-size: large;
     border-radius: 20px;
     padding: 5px 20px 5px 10px;
-
 }
 .form-container label{
     font-size: larger;
@@ -92,4 +92,15 @@
 #phone-label{
     grid-column: 1;
     grid-row: 7;
+}
+#reserve-button{
+    grid-column: span(1 / 3);
+    grid-row: 8;
+    position: relative;
+    left: 50%;
+    padding: 5px 10px 5px 10px;
+    font-size: large;
+    border-radius: 20px;
+    margin-top: 15px;
+    background-color: #F4CE14;
 }
