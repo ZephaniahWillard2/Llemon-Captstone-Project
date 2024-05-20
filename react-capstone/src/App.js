@@ -1,12 +1,12 @@
 import React from 'react';
 import {BrowserRouter as Router, Route, Routes, Link} from 'react-router-dom';
-import Reservation from './Components/Reservation';
+import BookingForm from './Components/BookingForm';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <Reservation/>
+      <BookingForm/>
     </div>
   );
 }

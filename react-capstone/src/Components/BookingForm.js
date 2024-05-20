@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import RadioButton from './RadioButton';
 
-const Reservation = ()=>{
+const BookingForm = ()=>{
   const [selectedOption, setSelectedOption] = useState('option1');
 
   function handleChange(event) {
@@ -44,4 +44,4 @@ const Reservation = ()=>{
     )
 };
 
-export default Reservation;
+export default BookingForm;
