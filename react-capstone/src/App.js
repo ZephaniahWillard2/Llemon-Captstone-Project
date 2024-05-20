@@ -1,24 +1,30 @@
 import React from 'react';
+import {Routes, Route, Link} from 'react-router-dom';
+import Header from './Components/Header';
+import Main from './Components/Main';
+import Footer from './Components/Footer';
+import HomePage from './Components/HomePage';
 import './App.css';
-import {BrowserRouter as Router, Route, Routes, Link} from 'react-router-dom';
+
 
 
 function App() {
   return (
     <>
-      <header>
+      <Header>
         <nav>
-          <ul>
-
-          </ul>
+          <Link to="/">HomePage</Link>
         </nav>
-      </header>
-      <main>
+      </Header>
+      <Main>
 
-      </main>
-      <footer>
+      </Main>
+      <Footer>
+        <Routes>
+          <Route path='/' element={<HomePage/>} ></Route>
+        </Routes>
         
-      </footer>
+      </Footer>
     </>
   );
 }
