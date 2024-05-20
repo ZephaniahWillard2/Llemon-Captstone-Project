@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-
 import RadioButton from './RadioButton';
 
 const Reservation = ()=>{
@@ -10,28 +9,36 @@ const Reservation = ()=>{
   }
 
     return(
-        <form>
-            <h1>Make a Reservation</h1>
-            <label htmlFor='name'>Name </label>
-            <input type='text' id='name' name="name" placeholder='Name'></input>
-            <br></br>
-            <label htmlFor='partyNumber'>Party Number </label>
-            <input type='number' id='partyNumber' name="partyNumber" placeholder='Party Number'></input>
-            <RadioButton selectedOption={selectedOption} handleChange={handleChange} />
-            <br></br>
-            <label htmlFor='date'>Date </label>
-            <input type='date' id='date' name="date" placeholder='Date'></input>
-            <br></br>
-            <label htmlFor='time'>Time </label>
-            <input type='time' id='time' name="time" placeholder='Time'></input>
-            <br></br>
-            <label htmlFor='email'>Email </label>
-            <input type='email' id='email' name="email" placeholder='Email'></input>
-            <br></br>
-            <label htmlFor='phone'>Phone (Optional) </label>
-            <input type='phone' id='phone' name="phone" placeholder='Phone (Optional)'></input>
+        <div className='grid-container'>
+            <h1>Reserve a Table</h1>
+            <h2>Make a Reservation at Your Local Little Lemon Restaraunt!</h2>
+            <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                Ut enim ad minim veniam.
+            </h4> <br></br>
+            <form className='form-container'>
 
-        </form>
+                    <label htmlFor='name-input' id='name-label'>Name </label>
+                    <input type='text' id='name-input' name="name" placeholder='Name'></input>
+
+                    <label htmlFor='partyNumber-input' id='partyNumber-label'>Party Size </label>
+                    <input type='number' id='partyNumber-input' name="partyNumber" placeholder='Party Size'></input>
+
+                    <RadioButton selectedOption={selectedOption} handleChange={handleChange} />
+
+                    <label htmlFor='date-input' id='date-label'>Date </label>
+                    <input type='date' id='date-input' name="date"></input>
+
+                    <label htmlFor='time-input' id='time-label'>Time </label>
+                    <input type='time' id='time-input' name="time" ></input>
+
+                    <label htmlFor='email-input' id='email-label'>Email </label>
+                    <input type='email' id='email-input' name="email" placeholder='Email'></input>
+
+                    <label htmlFor='phone-input' id='phone-label'>Phone (Optional) </label>
+                    <input type='phone' id='phone-input' name="phone" placeholder='Phone'></input>
+
+            </form>
+        </div>
     )
 };
 

@@ -7,7 +7,7 @@
 
 
 # ★ Parts of the Project - What Pages and Features are Needed:
-
+# {in dev-two}
     IMPORTANT - “Book a Reservation” Page:
         The primary objective of this project is to develop a reservation flow in your React project. Most of your time and effort should be dedicated to creating a reservation system for the restaurant, guided by your Figma design.
 
@@ -23,7 +23,7 @@
 
     Descriptions and Photos of Dishes:
         Enhance the menu pages with detailed descriptions and high-quality photographs of each dish. This will help to visually entice and inform customers about the variety and quality of the food offered, encouraging more reservations.
-
+# {in dev-one}
     Navigation Bar:
         Design a user-friendly and intuitive navigation bar that improves the overall user navigation experience. Ensure that it includes links to all critical sections of the website, such as the Home page, Menu, About Us, Reservations, and Contact Information.
 
