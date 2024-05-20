@@ -1,14 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import RadioButton from './RadioButton';
 
-const BookingForm = ()=>{
-  const availableTimes = useState([
-    
-  ])
+const BookingForm = ({availableTimes, handleDateChange, handleTimeChange, handleGuestChange})=>{
+  const [date, setDate] = useState('');
+  const [time, setTime] = useState('');
+  const [guests, setGuests] = useState(1);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('Form submitted', { date, time, guests });
+  };
 
-
-
-
+//RadioButton Code
   const [selectedOption, setSelectedOption] = useState('option1');
 
   function handleChange(event) {
@@ -22,28 +24,24 @@ const BookingForm = ()=>{
             <h4 style={{color:'white'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                 Ut enim ad minim veniam.
             </h4> <br></br>
-            <form className='form-container'>
+            <form className='form-container' onSubmit={handleSubmit}>
 
                     <label htmlFor='name-input' id='name-label'>Name </label>
                     <input type='text' id='name-input' name="name" placeholder='Name'></input>
 
                     <label htmlFor='partyNumber-input' id='partyNumber-label'>Party Size </label>
-                    <input type='number' id='partyNumber-input' name="partyNumber" max={15} placeholder='Party Size'></input>
+                    <input type='number' id='partyNumber-input' name="partyNumber" max={15} value={guests} onChange={handleGuestChange} placeholder='Party Size'></input>
 
                     <RadioButton selectedOption={selectedOption} handleChange={handleChange} />
 
                     <label htmlFor='date-input' id='date-label'>Choose Date </label>
-                    <input type='date' id='date-input' name="date"></input>
+                    <input type='date' id='date-input' name="date" value={date} onChange={handleDateChange}></input>
 
                     <label htmlFor='time-select' id='time-label'>Choose Time </label>
-                    <select type='time' id='time-select' name="time" >
-                      <option>17:00</option>
-                      <option>18:00</option>
-                      <option>19:00</option>
-                      <option>20:00</option>
-                      <option>21:00</option>
-                      <option>22:00</option>
-
+                    <select type='time' id='time-select' name="time" value={time} onChange={handleTimeChange}>
+                        {availableTimes.map((time) => (
+                          <option key={time} value={time}>{time}</option>
+                        ))}
                     </select>
 
                     <label htmlFor='email-input' id='email-label'>Email </label>

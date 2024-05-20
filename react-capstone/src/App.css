@@ -1,3 +1,4 @@
+/* BookingForm Styles */
 .grid-container{
     display: grid;
     border: solid;
@@ -33,9 +34,7 @@
     grid-column: span(1 / 3);
     grid-row: 3;
 }
-
-
-
+    /* Grid Styles */
 #name-input{
     grid-column: 2;
     grid-row: 1;

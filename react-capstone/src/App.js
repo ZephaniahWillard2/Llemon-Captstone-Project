@@ -5,7 +5,6 @@ import Header from './Components/Header';
 import Main from './Components/Main';
 import Footer from './Components/Footer';
 import HomePage from './Components/HomePage';
-
 import BookingForm from './Components/BookingForm';
 
 import './App.css';
@@ -15,10 +14,13 @@ import './App.css';
 function App() {
   return (
 
-    <>
-      <Header>
+    <div>
+      <BookingForm/>
+      {/* <Header>
         <nav>
-          <Link to="/">HomePage</Link>
+          <Link to="/">Footer</Link>
+          <Link to="/booking-form">BookingForm</Link>
+
         </nav>
       </Header>
       <Main>
@@ -26,11 +28,13 @@ function App() {
       </Main>
       <Footer>
         <Routes>
-          <Route path='/' element={<HomePage/>} ></Route>
+          <Route path='/' element={<Footer/>} ></Route>
+          <Route path="/booking-form" element={<BookingForm/>} ></Route>
+
         </Routes>
 
-      </Footer>
-    </>
+      </Footer> */}
+    </div>
 
 
 
