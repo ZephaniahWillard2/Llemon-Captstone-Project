@@ -1,21 +1,32 @@
 import React, { useState, useEffect } from 'react';
 import RadioButton from './RadioButton';
 
-const BookingForm = ({availableTimes, handleDateChange, handleTimeChange, handleGuestChange})=>{
+const BookingForm = ({availableTimes, dispatchOnDateChange, handleDateChange, handleTimeChange, handleGuestChange})=>{
   const [date, setDate] = useState('');
   const [time, setTime] = useState('');
   const [guests, setGuests] = useState(1);
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Form submitted', { date, time, guests });
   };
 
+  const handleDateChange = (e) => {
+    setDate(e.target.value);
+    dispatchOnDateChange(e.target.value)
+  };
+
+  const handleTimeChange = (e) => setTime(e.target.value);
+  const handleGuestChange = (e) => setGuests(e.target.value);
+
+
 //RadioButton Code
   const [selectedOption, setSelectedOption] = useState('option1');
 
-  function handleChange(event) {
-    setSelectedOption(event.target.value);
-  }
+  function handleChange(e) {
+    setSelectedOption(e.target.value);
+
+  };
 
     return(
         <div className='grid-container'>
