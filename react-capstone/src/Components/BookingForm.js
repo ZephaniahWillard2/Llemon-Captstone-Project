@@ -2,6 +2,13 @@ import React, { useState } from 'react';
 import RadioButton from './RadioButton';
 
 const BookingForm = ()=>{
+  const availableTimes = useState([
+    
+  ])
+
+
+
+
   const [selectedOption, setSelectedOption] = useState('option1');
 
   function handleChange(event) {
@@ -25,11 +32,19 @@ const BookingForm = ()=>{
 
                     <RadioButton selectedOption={selectedOption} handleChange={handleChange} />
 
-                    <label htmlFor='date-input' id='date-label'>Date </label>
+                    <label htmlFor='date-input' id='date-label'>Choose Date </label>
                     <input type='date' id='date-input' name="date"></input>
 
-                    <label htmlFor='time-input' id='time-label'>Time </label>
-                    <input type='time' id='time-input' name="time" ></input>
+                    <label htmlFor='time-select' id='time-label'>Choose Time </label>
+                    <select type='time' id='time-select' name="time" >
+                      <option>17:00</option>
+                      <option>18:00</option>
+                      <option>19:00</option>
+                      <option>20:00</option>
+                      <option>21:00</option>
+                      <option>22:00</option>
+
+                    </select>
 
                     <label htmlFor='email-input' id='email-label'>Email </label>
                     <input type='email' id='email-input' name="email" placeholder='Email'></input>

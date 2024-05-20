@@ -22,7 +22,7 @@
 
 .form-container input{
     font-size: large;
-    border-radius: 20px;
+    border-radius: 10px;
     padding: 5px 20px 5px 10px;
 }
 .form-container label{
@@ -65,10 +65,12 @@
     grid-row: 4;
 }
 
-#time-input{
+#time-select{
     grid-column: 2;
     grid-row: 5;
-
+    padding: 5px 20px 5px 20px;
+    font-size: large;
+    border-radius: 10px;
 }
 #time-label{
     grid-column: 1;
