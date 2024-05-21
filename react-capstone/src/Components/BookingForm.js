@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import RadioButton from './RadioButton';
 
-const BookingForm = ({availableTimes, dispatchOnDateChange, handleDateChange, handleTimeChange, handleGuestChange})=>{
+const BookingForm = ({availableTimes, dispatchOnDateChange})=>{
   const [date, setDate] = useState('');
   const [time, setTime] = useState('');
   const [guests, setGuests] = useState(1);
