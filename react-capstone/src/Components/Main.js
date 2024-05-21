@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useReducer } from 'react';
 import BookingForm from './BookingForm';
+import {fetchAPI, submitAPI} from ''
 
 
 const Main = ()=>{
@@ -7,7 +8,7 @@ const Main = ()=>{
     updateTimes, [], initializeTimes
 );
 
-
+//API"s not defined. 
     const fetchAPI = () =>{
       fetch(availableTimes)
       .then(response => response.json())
@@ -33,7 +34,10 @@ const Main = ()=>{
       [...initializeAvailableTimes, ...fetchAPI(new Date())]
     };
 
-    
+    const submitData = formData =>{
+      const response = submitAPI(formData);
+
+    }
 
     // useEffect(() => {
     //   if (date) {
