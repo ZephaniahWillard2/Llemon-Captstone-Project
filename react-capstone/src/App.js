@@ -1,5 +1,4 @@
 import React from 'react';
-
 import {Routes, Route, Link} from 'react-router-dom';
 import Header from './Components/Header';
 import Main from './Components/Main';
@@ -34,10 +33,8 @@ function App() {
         </Routes>
 
       </Footer> */}
+
     </div>
-
-
-
   );
 }
 
