@@ -1,5 +1,6 @@
 import React from "react";
 import {Link} from 'react-router-dom';
+import './HeaderStyles.css'
 
 const Header = () =>{
     return(
@@ -15,6 +16,7 @@ const Header = () =>{
                 <Link>Reserve a Table</Link>
                 <Link>About Us</Link> */}
             </nav>
+           
         </header>
     )
 

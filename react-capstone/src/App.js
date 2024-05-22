@@ -1,10 +1,10 @@
 import React from 'react';
 import {Routes, Route, Link} from 'react-router-dom';
-import Header from './Components/Header';
+import Header from './Components/Header/Header';
 import Main from './Components/Main';
 import Footer from './Components/Footer';
 import HomePage from './Components/HomePage';
-import BookingForm from './Components/BookingForm';
+import BookingForm from './Components/BookingFormFolder/BookingForm';
 
 import './App.css';
 
@@ -14,7 +14,7 @@ function App() {
   return (
 
     <div>
-      <BookingForm/>
+      <Header/>
       {/* <Header>
         <nav>
           <Link to="/">Footer</Link>
