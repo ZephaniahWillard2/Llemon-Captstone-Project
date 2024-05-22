@@ -69,7 +69,10 @@ const BookingForm = ({ availableTimes = [17, 18, 19], dispatchOnDateChange = () 
         <label htmlFor='phone-input' id='phone-label'>Phone (Optional) </label>
         <input type='phone' id='phone-input' name="phone" placeholder='Phone'></input>
         <button type='submit' id='reserve-button'>Submit Reservation</button>
+
+        
       </form>
+
     </div>
   );
 };

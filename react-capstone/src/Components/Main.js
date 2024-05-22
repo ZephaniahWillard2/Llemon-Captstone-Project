@@ -31,6 +31,10 @@ const Main = () => {
         onFormSubmit={handleFormSubmit}
         isFormSubmitted={isFormSubmitted}
       />
+       <div>
+        <input style={{color: 'black'}}>Name</input>
+        <button>Button</button>
+      </div>
     </main>
   );
 };
