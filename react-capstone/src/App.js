@@ -15,7 +15,7 @@ function App() {
   return (
 
     <div>
-      <Header/>
+      <BookingForm/>
       {/* <Header>
         <nav>
           <Link to="/">Footer</Link>
