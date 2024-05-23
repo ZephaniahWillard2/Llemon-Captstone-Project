@@ -24,17 +24,12 @@ const Main = () => {
 
   return (
     <main>
-      Main
       <BookingForm
         availableTimes={availableTimes}
         dispatchOnDateChange={dispatchOnDateChange}
         onFormSubmit={handleFormSubmit}
         isFormSubmitted={isFormSubmitted}
       />
-       <div>
-        <input style={{color: 'black'}}>Name</input>
-        <button>Button</button>
-      </div>
     </main>
   );
 };
