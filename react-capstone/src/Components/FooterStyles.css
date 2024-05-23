@@ -1,0 +1,22 @@
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    color: white;
+    background-color: #475C55;
+}
+.flex-container > div{
+    width: 200px;
+    margin: 100px;
+    text-align: center;
+}
+.flex-container > div:hover{
+    background-color: #f4ce14;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: black;
+    transition: .2s;
+    text-decoration: underline 2px black;
+}
