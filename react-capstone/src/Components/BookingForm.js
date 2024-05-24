@@ -46,28 +46,53 @@ const BookingForm = ({ availableTimes = [17, 18, 19], dispatchOnDateChange = () 
       <form className='form-container' onSubmit={(e) => onFormSubmit(e, formValue)}>
 
         <label htmlFor='name-input' id='name-label'>Name </label>
-        <input type='text' id='name-input' name="name" placeholder='Name'></input>
+        <input 
+            type='text' 
+            id='name-input' 
+            name="name" 
+            placeholder='Name'
+        />
 
         <label htmlFor='partyNumber-input' id='partyNumber-label'>Party Size </label>
-        <input type='number' id='partyNumber-input' name="partyNumber" onChange={handleInputChange} placeholder='Party Size'></input>
+        <input 
+            type='number'
+            id='partyNumber-input'
+            name="partyNumber"
+            onChange={handleInputChange}
+            placeholder='Party Size'
+            className={isFormSubmitted && !formValue.guests ? "error" : ""}
+        />
 
         <RadioButton selectedOption={selectedOption} handleChange={handleChange} />
 
         <label htmlFor='date-input' id='date-label'>Choose Date </label>
-        <input type='date' id='date-input' name="date" onChange={handleInputChange}></input>
+        <input
+            type='date'
+            id='date-input'
+            name="date"
+            onChange={handleInputChange}
+            className={isFormSubmitted && !formValue.date ? "error" : ""}
+        />
 
         <label htmlFor='time-select' id='time-label'>Choose Time </label>
-        <select type='time' id='time-select' name="time" value={formValue.time} onChange={handleInputChange}>
-          {availableTimes.map(time => (
-            <option key={time}>{time}</option>
-          ))}
+        <select
+            type='time'
+            id='time-select'
+            name="time"
+            value={formValue.time}
+            onChange={handleInputChange}
+            className={isFormSubmitted && !formValue.time ? "error" : ""}
+        >
+            {availableTimes.map(time => (
+              <option key={time}>{time}</option>
+            ))}
         </select>
 
         <label htmlFor='email-input' id='email-label'>Email </label>
-        <input type='email' id='email-input' name="email" placeholder='Email'></input>
+        <input type='email' id='email-input' name="email" placeholder='Email'/>
 
         <label htmlFor='phone-input' id='phone-label'>Phone (Optional) </label>
-        <input type='phone' id='phone-input' name="phone" placeholder='Phone'></input>
+        <input type='phone' id='phone-input' name="phone" placeholder='Phone'/>
         <button type='submit' id='reserve-button'>Submit Reservation</button>
 
         
