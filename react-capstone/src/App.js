@@ -7,6 +7,7 @@ import Main from './Components/Main';
 import BookingForm from './Components/BookingForm/BookingForm';
 import FoodCard from './Components/FoodItems/FoodCard';
 import Specials from './Components/SpecialsFolder/Specials';
+import Reserve from './Components/ReserveTable/Reserve';
 
 // import './App.css';
 
@@ -21,6 +22,7 @@ function App() {
      <Header/>
      <Hero/>
      <Specials/>
+     <Reserve/>
      <Footer/>
 
     </div>

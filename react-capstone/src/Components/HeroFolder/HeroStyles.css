@@ -5,6 +5,7 @@
     position: relative;
     background-repeat: no-repeat;
     background-size: 1500px 800px;
+    border-bottom: solid 2px;
 }
 h1{
     margin: 0px;
@@ -37,11 +38,14 @@ h1{
     margin-bottom: auto;
 }
 .hero-container > button{
-    padding: 15px 10px 15px 10px;
-    border: solid white ;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0.5rem 0 0 ;
+    color: black;
+    background-color: #f4ce14;
+    padding: 5px 10px 5px 10px;
     font-size: large;
     border-radius: 20px;
-    background-color: #F4CE14;
 }
 .hero-container > button:hover{
     background-color: #f6d843;

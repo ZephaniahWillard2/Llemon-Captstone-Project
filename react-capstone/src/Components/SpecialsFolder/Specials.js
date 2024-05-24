@@ -1,5 +1,5 @@
 import React from "react";
-import './SpecialsStyles.css'
+import './SpecialsStyles.css';
 import FoodCard from "../FoodItems/FoodCard";
 
 
