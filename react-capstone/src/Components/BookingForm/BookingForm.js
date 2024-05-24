@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import RadioButton from './RadioButton';
+import RadioButton from '../RadioButton';
 import './BookingFormStyles.css'
 
 const BookingForm = ({ availableTimes = [17, 18, 19], dispatchOnDateChange = () => {}, onFormSubmit, isFormSubmitted }) => {

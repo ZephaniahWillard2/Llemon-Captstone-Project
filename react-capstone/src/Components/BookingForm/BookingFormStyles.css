@@ -1,6 +1,4 @@
-
-/* BookingForm component Styles */
-/* Form */
+/* BookingForm Styles */
 .grid-container{
     display: grid;
     border: solid;
@@ -14,6 +12,7 @@
     display: grid;
     row-gap: 15px;
     grid-template-columns: 200px 200px;
+    width: 60%;
     grid-template-rows: repeat(8, 60px);
     justify-items: left;
     align-items: center;
@@ -107,3 +106,4 @@
     margin-top: 15px;
     background-color: #F4CE14;
 }
+/* >>>>>>> development-api */

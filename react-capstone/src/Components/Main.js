@@ -1,6 +1,6 @@
 
 import React, { useReducer, useState } from 'react';
-import BookingForm from './BookingForm';
+import BookingForm from './BookingForm/BookingForm';
 import { fetchAPI, submitAPI } from '../Utils/SimulateApi';
 
 const updateTimes = (availableTimes, date) => {

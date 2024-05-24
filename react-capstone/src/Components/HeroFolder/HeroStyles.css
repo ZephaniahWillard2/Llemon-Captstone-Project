@@ -1,5 +1,5 @@
 .container{
-    height: 600px;
+    height: 700px;
     background-color: white;
     background: url(/Users/htgparticipant/Documents/FrontEndDev/Llemon-Captstone-Project/react-capstone/src/Assets/Greek.jpg);
     position: relative;
@@ -25,6 +25,7 @@ h1{
     line-height: 30px;
     position: absolute;
     left: 100px;
+    bottom: 100px;
 }
 
 .hero-container > p{

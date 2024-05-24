@@ -14,9 +14,6 @@ const Footer = ()=>{
                 <div className="contact">Contact</div>
                 <div className="social">Social</div>
                 <div className="careers">Careers</div>
-=======
-        
-
             </div>
         </footer>
     );
