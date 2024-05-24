@@ -10,10 +10,14 @@
   
   header{
     background-color: #475C55;
-    padding-top: 20px;
-    padding-bottom: 40px;
+    padding-top: 40px;
+    padding-bottom: 50px;
     display: flex;
     border-bottom: solid;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    
   }
   header h1{
     font-size: 3em;
@@ -42,5 +46,5 @@
     color: black;
     transition: .2s;
     text-decoration: underline 2px black;
-  
+    text-underline-offset: 3px;
   }

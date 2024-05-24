@@ -1,6 +1,7 @@
 import React from 'react';
 import {Routes, Route, Link} from 'react-router-dom';
 import Header from './Components/Header';
+import Hero from './Components/Hero';
 import Footer from './Components/Footer';
 import BookingForm from './Components/BookingForm';
 
@@ -14,6 +15,7 @@ function App() {
 
     <div>
      <Header/>
+     <Hero/>
      <Footer/>
       {/* <Header>
         <nav>

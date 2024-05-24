@@ -6,6 +6,7 @@
     height: 100px;
     color: white;
     background-color: #475C55;
+    font-size: large;
 }
 .flex-container > div{
     width: 200px;
@@ -19,4 +20,5 @@
     color: black;
     transition: .2s;
     text-decoration: underline 2px black;
+    text-underline-offset: 3px;
 }

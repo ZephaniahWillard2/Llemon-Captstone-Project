@@ -1,0 +1,35 @@
+.container{
+    height: 600px;
+    background-color: white;
+    background: url(/Users/htgparticipant/Documents/FrontEndDev/Llemon-Captstone-Project/react-capstone/src/Assets/Greek.jpg);
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: 1500px 800px;
+}
+h1{
+    margin: 0px;
+    padding-top: 15px;
+}
+.hero-container{
+    border: solid;
+    display: inline-block;
+    box-sizing: border-box;
+    height: 300px;
+    width: 400px;
+    color: white;
+    background-color: black;
+    text-align: center;
+    margin-top: 200px;
+    line-height: 30px;
+    position: absolute;
+    left: 100px;
+}
+
+.hero-container > p{
+    font-size: larger;
+}
+
+.hero-content{
+    margin-top: auto;
+    margin-bottom: auto;
+}
