@@ -1,5 +1,5 @@
 import React from 'react';
-import {Routes, Route, Link} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Routes, Link} from 'react-router-dom';
 import Header from './Components/Header';
 import Hero from './Components/Hero';
 import Footer from './Components/Footer';
@@ -12,7 +12,7 @@ import BookingForm from './Components/BookingForm';
 
 function App() {
   return (
-
+  
     <div>
      <Header/>
      <Hero/>
@@ -37,6 +37,7 @@ function App() {
       </Footer> */}
 
     </div>
+  
   );
 }
 
