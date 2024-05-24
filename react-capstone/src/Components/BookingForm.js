@@ -2,71 +2,194 @@ import React, { useState, useEffect } from 'react';
 import RadioButton from './RadioButton';
 import './BookingFormStyles.css'
 
-const BookingForm = ({availableTimes, dispatchOnDateChange})=>{
-  const [date, setDate] = useState('');
-  const [time, setTime] = useState('');
-  const [guests, setGuests] = useState(1);
-  
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Form submitted', { date, time, guests });
+const BookingForm = ({ availableTimes = [17, 18, 19], dispatchOnDateChange = () => {}, onFormSubmit, isFormSubmitted }) => {
+  const defaultTime = availableTimes.length > 0 ? availableTimes[0] : '';
+  const [formValue, setFormValue] = useState({
+    date: "",
+    time: defaultTime,
+    guests: ""
+  });
+
+  const handleInputChange = (e) => {
+    if (e.target.name === 'date') {
+      dispatchOnDateChange(e.target.value);
+    }
+    setFormValue({
+      ...formValue,
+      [e.target.name]: e.target.value,
+    });
   };
 
-  const handleDateChange = (e) => {
-    setDate(e.target.value);
-    dispatchOnDateChange(e.target.value)
-  };
-
-  const handleTimeChange = (e) => setTime(e.target.value);
-  const handleGuestChange = (e) => setGuests(e.target.value);
-
-
-//RadioButton Code
   const [selectedOption, setSelectedOption] = useState('option1');
 
   function handleChange(e) {
     setSelectedOption(e.target.value);
-
   };
 
-    return(
-        <div className='grid-container'>
-            <h1 style={{color:'white'}}>Reserve a Table</h1>
-            <h2 style={{color:'white'}}>Make a Reservation at Your Local Little Lemon Restaraunt!</h2>
-            <h4 style={{color:'white'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam.
-            </h4> <br></br>
-            <form className='form-container' onSubmit={handleSubmit}>
+  useEffect(() => {
+    if (isFormSubmitted) {
+      // Reset form or show a success message
+      setFormValue({
+        date: "",
+        time: availableTimes.length > 0 ? availableTimes[0] : '',
+        guests: ""
+      });
+    }
+  }, [isFormSubmitted, availableTimes]);
 
-                    <label htmlFor='name-input' id='name-label'>Name </label>
-                    <input type='text' id='name-input' name="name" placeholder='Name'></input>
+  return (
+    <div className='grid-container'>
+      <h1 style={{ color: 'white' }}>Reserve a Table</h1>
+      <h2 style={{ color: 'white' }}>Make a Reservation at Your Local Little Lemon Restaurant!</h2>
+      <h4 style={{ color: 'white' }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam.
+      </h4> <br></br>
+      <form className='form-container' onSubmit={(e) => onFormSubmit(e, formValue)}>
 
-                    <label htmlFor='partyNumber-input' id='partyNumber-label'>Party Size </label>
-                    <input type='number' id='partyNumber-input' name="partyNumber" max={15} value={guests} onChange={handleGuestChange} placeholder='Party Size'></input>
+        <label htmlFor='name-input' id='name-label'>Name </label>
+        <input 
+            type='text' 
+            id='name-input' 
+            name="name" 
+            placeholder='Name'
+        />
 
-                    <RadioButton selectedOption={selectedOption} handleChange={handleChange} />
+        <label htmlFor='partyNumber-input' id='partyNumber-label'>Party Size </label>
+        <input 
+            type='number'
+            id='partyNumber-input'
+            name="partyNumber"
+            onChange={handleInputChange}
+            placeholder='Party Size'
+            className={isFormSubmitted && !formValue.guests ? "error" : ""}
+        />
 
-                    <label htmlFor='date-input' id='date-label'>Choose Date </label>
-                    <input type='date' id='date-input' name="date" value={date} onChange={handleDateChange}></input>
+        <RadioButton selectedOption={selectedOption} handleChange={handleChange} />
 
-                    <label htmlFor='time-select' id='time-label'>Choose Time </label>
-                    <select type='time' id='time-select' name="time" value={time} onChange={handleTimeChange}>
-                        {availableTimes.map((time) => (
-                          <option key={time} value={time}>{time}</option>
-                        ))}
-                    </select>
+        <label htmlFor='date-input' id='date-label'>Choose Date </label>
+        <input
+            type='date'
+            id='date-input'
+            name="date"
+            onChange={handleInputChange}
+            className={isFormSubmitted && !formValue.date ? "error" : ""}
+        />
 
-                    <label htmlFor='email-input' id='email-label'>Email </label>
-                    <input type='email' id='email-input' name="email" placeholder='Email'></input>
+        <label htmlFor='time-select' id='time-label'>Choose Time </label>
+        <select
+            type='time'
+            id='time-select'
+            name="time"
+            value={formValue.time}
+            onChange={handleInputChange}
+            className={isFormSubmitted && !formValue.time ? "error" : ""}
+        >
+            {availableTimes.map(time => (
+              <option key={time}>{time}</option>
+            ))}
+        </select>
 
-                    <label htmlFor='phone-input' id='phone-label'>Phone (Optional) </label>
-                    <input type='phone' id='phone-input' name="phone" placeholder='Phone'></input>
-                    <button type='submit' id='reserve-button'>Submit Reservation</button>
+        <label htmlFor='email-input' id='email-label'>Email </label>
+        <input type='email' id='email-input' name="email" placeholder='Email'/>
 
+        <label htmlFor='phone-input' id='phone-label'>Phone (Optional) </label>
+        <input type='phone' id='phone-input' name="phone" placeholder='Phone'/>
+        <button type='submit' id='reserve-button'>Submit Reservation</button>
 
-            </form>
-        </div>
-    )
+        
+      </form>
+
+    </div>
+  );
 };
 
 export default BookingForm;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import React, { useState, useEffect } from 'react';
+// import RadioButton from './RadioButton';
+
+// const BookingForm = ({availableTimes=[], dispatchOnDateChange, onFormSubmit})=>{
+//   const defaultTime = availableTimes.length > 0 ? availableTimes[0] : '';
+//   const [formValue, setFormValue] = useState({
+//     date:"",
+//     time: defaultTime,
+//     guests:""
+//   });
+ 
+
+//   const handleInputChange = (e) =>{
+//     if(e.target.name === 'date'){
+//       dispatchOnDateChange(e.target.value)
+//     }
+//     setFormValue({
+//       ...formValue,
+//       [e.target.name]: e.target.value,
+//     });
+//   }
+
+
+// //RadioButton Code
+//   const [selectedOption, setSelectedOption] = useState('option1');
+
+//   function handleChange(e) {
+//     setSelectedOption(e.target.value);
+
+//   };
+
+//     return(
+//         <div className='grid-container'>
+//             <h1 style={{color:'white'}}>Reserve a Table</h1>
+//             <h2 style={{color:'white'}}>Make a Reservation at Your Local Little Lemon Restaraunt!</h2>
+//             <h4 style={{color:'white'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+//                 Ut enim ad minim veniam.
+//             </h4> <br></br>
+//             <form className='form-container' onSubmit={(e) => onFormSubmit(e, formValue)}>
+
+//                     <label htmlFor='name-input' id='name-label'>Name </label>
+//                     <input type='text' id='name-input' name="name" placeholder='Name'></input>
+
+//                     <label htmlFor='partyNumber-input' id='partyNumber-label'>Party Size </label>
+//                     <input type='number' id='partyNumber-input' name="partyNumber" onChange={handleInputChange} placeholder='Party Size'></input>
+
+//                     <RadioButton selectedOption={selectedOption} handleChange={handleChange} />
+
+//                     <label htmlFor='date-input' id='date-label'>Choose Date </label>
+//                     <input type='date' id='date-input' name="date" onChange={handleInputChange}></input>
+
+//                     <label htmlFor='time-select' id='time-label'>Choose Time </label>
+//                     <select type='time' id='time-select' name="time" value={formValue.time} onChange={handleInputChange}>
+//                         {availableTimes.map(time => (
+//                           <option key={time}>{time}</option>
+//                         ))}
+//                     </select>
+
+//                     <label htmlFor='email-input' id='email-label'>Email </label>
+//                     <input type='email' id='email-input' name="email" placeholder='Email'></input>
+
+//                     <label htmlFor='phone-input' id='phone-label'>Phone (Optional) </label>
+//                     <input type='phone' id='phone-input' name="phone" placeholder='Phone'></input>
+//                     <button type='submit' id='reserve-button'>Submit Reservation</button>
+
+
+//             </form>
+//         </div>
+//     )
+// };
+
+// export default BookingForm;

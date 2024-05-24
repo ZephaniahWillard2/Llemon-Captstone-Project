@@ -14,27 +14,11 @@ function App() {
   return (
   
     <div>
+
      <Header/>
      <Hero/>
+     <Main/>
      <Footer/>
-      {/* <Header>
-        <nav>
-          <Link to="/">Footer</Link>
-          <Link to="/booking-form">BookingForm</Link>
-
-        </nav>
-      </Header>
-      <Main>
-
-      </Main>
-      <Footer>
-        <Routes>
-          <Route path='/' element={<Footer/>} ></Route>
-          <Route path="/booking-form" element={<BookingForm/>} ></Route>
-
-        </Routes>
-
-      </Footer> */}
 
     </div>
   
