@@ -1,4 +1,3 @@
-
 import React, { useReducer, useState } from 'react';
 import BookingForm from './BookingForm/BookingForm';
 import { fetchAPI, submitAPI } from '../Utils/SimulateApi';
@@ -24,13 +23,15 @@ const Main = () => {
   };
 
   return (
-    <main>
+    <main style={{display:'flex'}}>
       <BookingForm
         availableTimes={availableTimes}
         dispatchOnDateChange={dispatchOnDateChange}
         onFormSubmit={handleFormSubmit}
         isFormSubmitted={isFormSubmitted}
       />
+            <img src='https://images.pexels.com/photos/5962044/pexels-photo-5962044.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2' className='flex-image'/>
+
     </main>
   );
 };

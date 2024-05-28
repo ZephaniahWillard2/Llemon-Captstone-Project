@@ -4,6 +4,7 @@
     height: 100%;
     min-height: 27rem;
     width: 18rem;
+    
     overflow: hidden;
     display: flex;
     flex-direction: column;

@@ -39,11 +39,8 @@ const BookingForm = ({ availableTimes = [17, 18, 19], dispatchOnDateChange = () 
 
   return (
     <div className='grid-container'>
-      <h1 style={{ color: 'white' }}>Reserve a Table</h1>
-      <h2 style={{ color: 'white' }}>Make a Reservation at Your Local Little Lemon Restaurant!</h2>
-      <h4 style={{ color: 'white' }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        Ut enim ad minim veniam.
-      </h4> <br></br>
+      <h2>Make a Reservation!</h2>
+      
       <form className='form-container' onSubmit={(e) => onFormSubmit(e, formValue)}>
 
         <label htmlFor='name-input' id='name-label'>Name </label>

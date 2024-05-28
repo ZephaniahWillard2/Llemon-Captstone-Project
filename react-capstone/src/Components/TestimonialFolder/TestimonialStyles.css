@@ -1,0 +1,117 @@
+.testimonial{
+  display: flex;
+  border-bottom: solid 75px;
+}
+.test-image{
+  display: flex;
+  flex: 1;
+  width: 50%;
+  height: 80%;
+}
+
+.head-test{
+  background-color: black;
+  color: white;
+  font-size: 2em;
+  height: 45px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 5%;
+  margin: 0%;
+  text-align: right;
+}
+
+.contain {
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    width: 50%;
+    height: 80vh;
+    padding-right: 100px;
+    padding-left: -400px;
+    margin-top: 5em;
+    margin-bottom: -10.5em;
+  }
+
+  .card-contain {
+    position: relative;
+    width: 36rem;
+    height: 22rem;
+  }
+
+  .background-block {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+
+  .card-contain svg {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3rem;
+    color: gray;
+  }
+
+  .card-contain svg:hover {
+    cursor: pointer;
+    color: blue;
+  }
+
+  article {
+    position: absolute;
+    width: 12rem;
+    height: 100%;
+    transition: all 1s;
+  }
+
+  .card {
+    position: absolute;
+    height: 25rem;
+    width: 18rem;
+    margin: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    line-height: 2rem;
+    background-color: #e2dfcf;
+    border-radius: 1rem;
+    text-align: center;
+    box-sizing: border-box;
+    user-select: none;
+  }
+  .card > h2{
+    font-size: larger;
+  }
+
+  .card:hover {
+    cursor: pointer;
+  }
+
+  .prevCard {
+    left: 0;
+    opacity: 0;
+    z-index: -1;
+  }
+
+  .activeCard {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .nextCard {
+    left: 100%;
+    transform: translateX(-100%);
+    opacity: 0;
+    z-index: -1;
+  }
+
+  /* Carousel buttons */
+
+  .leftBtn {
+    left: 6rem;
+  }
+
+  .rightBtn {
+    right: -1rem;
+  }

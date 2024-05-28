@@ -3,7 +3,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    height: 100px;
+    height: 150px;
     color: white;
     background-color: #475C55;
     font-size: large;
@@ -21,4 +21,10 @@
     transition: .2s;
     text-decoration: underline 2px black;
     text-underline-offset: 3px;
+}
+
+.logo{
+    height: 70%;
+    border-radius: 20px;
+    margin: 100px;
 }

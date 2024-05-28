@@ -1,13 +1,10 @@
 import React from 'react';
-import {BrowserRouter as Router, Route, Routes, Link} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import Header from './Components/HeaderFolder/Header';
-import Hero from './Components/HeroFolder/Hero';
-import Footer from './Components/FooterFolder/Footer';
+import Footer from './Components/FooterFolder/Footer'
 import Main from './Components/Main';
-import BookingForm from './Components/BookingForm/BookingForm';
-import FoodCard from './Components/FoodItems/FoodCard';
-import Specials from './Components/SpecialsFolder/Specials';
-import Reserve from './Components/ReserveTable/Reserve';
+import HomePage from './Components/HomePage';
+
 
 // import './App.css';
 
@@ -18,13 +15,16 @@ function App() {
   return (
   
     <div>
-
-     <Header/>
-     <Hero/>
-     <Specials/>
-     <Reserve/>
-     <Footer/>
-
+      <Router>
+       <Header/>
+        <Routes>
+          <Route exact path='/home' element={<HomePage/>}/>
+          <Route path='/reserve' element={<Main/>}/>
+          <Route path='/reserve a table' element={<Main/>}/>
+        </Routes>
+      <Footer/>
+     </Router>
+    
     </div>
   
   );

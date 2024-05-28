@@ -7,14 +7,11 @@ const Header = () =>{
         <header>
             <h1>The Little Lemon</h1>
             <nav className="Nav-bar">
-                <a>Home</a>
+                <Link to="/home">Home</Link>
                 <a href="">Menu</a>
-                <a to="/Reserve">Reserve</a>
+                <Link to="/reserve">Reserve</Link>
                 <a href="">About Us</a>
-                {/* <Link to="/">Home</Link>
-                <Link>Menu</Link>
-                <Link>Reserve a Table</Link>
-                <Link>About Us</Link> */}
+
             </nav>
            
         </header>
