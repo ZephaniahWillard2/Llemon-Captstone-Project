@@ -5,12 +5,6 @@ import Footer from './Components/FooterFolder/Footer'
 import Main from './Components/Main';
 import HomePage from './Components/HomePage';
 
-
-// import './App.css';
-
-
-
-
 function App() {
   return (
   

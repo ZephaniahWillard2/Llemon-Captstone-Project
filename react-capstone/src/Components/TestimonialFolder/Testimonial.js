@@ -28,13 +28,10 @@ const Testimonial = () => {
   };
 
   const handlePointerEvent = (e) => {
-    /* check which type of event we have, 
-    and set a flag variable */
+    /* check which type of event
+    and set flag variable */
     let isTouchEvent = e.type === "touchstart" ? true : false;
-
-    /* this is our card we will move */
     let card = e.target;
-    /* to keep track of the value to offset the card left */
     let offset = 0;
     /* keeps the initial mouse click x value */
     let initialX = isTouchEvent ? e.touches[0].clientX : e.clientX;
@@ -51,7 +48,7 @@ const Testimonial = () => {
     /* set the documents ontouchend to this function */
     document.ontouchend = onPointerEnd;
 
-    /* when the mouse moves we handle the event here */
+    /* when the mouse moves handle the event here */
     function onPointerMove(e) {
       /* set offset to the current position of the cursor,
       minus the initial starting position  */
@@ -63,7 +60,7 @@ const Testimonial = () => {
           card.style.left = 0;
         } else {
           /* hide the shift back to center 
-        until after the transition */
+        until after transition */
           setTimeout(() => {
             card.style.left = 0;
           }, 1000);
@@ -77,7 +74,7 @@ const Testimonial = () => {
           card.style.left = 0;
         } else {
           /* hide the shift back to center 
-        until after the transition */
+        until after transition */
           setTimeout(() => {
             card.style.left = 0;
           }, 1000);
@@ -89,8 +86,8 @@ const Testimonial = () => {
     }
 
     function onPointerEnd(e) {
-      /* if user releases mouse early,
-      card needs to snap back */
+      /* if releases mouse early,
+      card snaps back */
       if (offset < 0 && offset > -100) {
         card.style.left = 0;
       }

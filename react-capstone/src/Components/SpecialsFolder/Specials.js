@@ -2,7 +2,6 @@ import React from "react";
 import './SpecialsStyles.css';
 import FoodCard from "../FoodItems/FoodCard";
 
-
 const specials = [
   {
     id: 1,

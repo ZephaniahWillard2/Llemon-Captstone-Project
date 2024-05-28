@@ -11,12 +11,12 @@ const Header = () =>{
                 <a href="">Menu</a>
                 <Link to="/reserve">Reserve</Link>
                 <a href="">About Us</a>
-
             </nav>
-           
         </header>
     )
 
 };
 
 export default Header;
+
+// Change a tags to links, add pages to menu and about us

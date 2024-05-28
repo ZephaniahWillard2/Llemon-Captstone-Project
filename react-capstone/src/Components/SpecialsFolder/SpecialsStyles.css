@@ -5,15 +5,6 @@
   margin: 0 auto;
 }
 
-/* .header-container {
-  display: grid;
-  align-items: center;
-  grid-column-gap: 2rem;
-  grid-template: "info image";
-  grid-template-columns: 85fr 15fr;
-  margin-bottom: 2rem;
-} */
-
 .header-list {
   display: flex;
   flex-direction: row;

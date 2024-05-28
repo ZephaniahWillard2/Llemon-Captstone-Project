@@ -4,7 +4,6 @@ import Specials from "./SpecialsFolder/Specials";
 import Reserve from "./ReserveTable/Reserve";
 import Testimonial from "./TestimonialFolder/Testimonial";
 
-
 const HomePage = ()=>{
     return(
         <main>
@@ -12,7 +11,6 @@ const HomePage = ()=>{
             <Specials/>
             <Reserve/>
             <Testimonial/>
-            
         </main>
     );
 };
