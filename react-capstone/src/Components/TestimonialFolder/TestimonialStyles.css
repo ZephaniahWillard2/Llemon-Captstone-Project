@@ -56,7 +56,7 @@
 
   .card-contain svg:hover {
     cursor: pointer;
-    color: blue;
+    color: black;
   }
 
   article {
